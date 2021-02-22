@@ -13,7 +13,10 @@ export type ResolveLayoutShiftPluginOptions = {
   maxWidth?: number
 }
 
-function resolveLayoutShiftPlugin(this: Processor, options?: ResolveLayoutShiftPluginOptions ): Transformer {
+function resolveLayoutShiftPlugin(
+  this: Processor,
+  options?: ResolveLayoutShiftPluginOptions
+): Transformer {
   const type: Type = (options && options.type) || 'ratio'
   const ratio = (options && options.ratio) || 0.5
   const maxWidth = (options && options.maxWidth) || 0
@@ -36,20 +39,20 @@ function resolveLayoutShiftPlugin(this: Processor, options?: ResolveLayoutShiftP
     const image = await Jimp.read(Buffer.from(response.data, 'binary'))
     const size = {
       width: image.bitmap.width,
-      height: image.bitmap.height,
+      height: image.bitmap.height
     }
     switch (type) {
       case 'ratio': {
         size.height = ~~(size.height * ratio)
         size.width = ~~(size.width * ratio)
-        break;
+        break
       }
       case 'maxWidth': {
         if (size.width > maxWidth) {
           size.height = ~~(size.height * (maxWidth / size.width))
           size.width = ~~(size.width * (maxWidth / size.width))
         }
-        break;
+        break
       }
     }
     el.properties = {
@@ -63,9 +66,7 @@ function resolveLayoutShiftPlugin(this: Processor, options?: ResolveLayoutShiftP
     visit<hast.Element>(htmlAST, 'element', (el: hast.Element) => {
       matches.push(el)
     })
-    await Promise.all(
-      matches.map( el => visitor(el) )
-    );
+    await Promise.all(matches.map((el) => visitor(el)))
     return htmlAST
   }
 
