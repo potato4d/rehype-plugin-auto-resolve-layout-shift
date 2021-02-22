@@ -24,8 +24,8 @@ This is the most recommended option, although it requires some effort.
 
 > Calculation Formula
 >
-> 1. width <= maxWidth: width=width,height=height
-> 2. width > maxWidth: width = width * (maxWidth / width), height = height * (maxWidth / width)
+> 1. width > maxWidth: width=width,height=height
+> 2. width <= maxWidth: width = width * (maxWidth / width), height = height * (maxWidth / width)
 
 1. Add width/height attribute to your markdown document
 
