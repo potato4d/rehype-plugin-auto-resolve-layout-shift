@@ -31,7 +31,7 @@
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
-    "standard-version": "^9.0.0",
+    "standard-version": "^9.1.1",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
   },
