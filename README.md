@@ -2,7 +2,7 @@
 
 ![build](https://github.com/potato4d/rehype-plugin-auto-resolve-layout-shift/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/potato4d/rehype-plugin-auto-resolve-layout-shift/branch/master/graph/badge.svg)](https://codecov.io/gh/potato4d/rehype-plugin-auto-resolve-layout-shift) ![Version](https://img.shields.io/npm/v/rehype-plugin-auto-resolve-layout-shift.svg?sanitize=true)
 
-Flexible resolve layout-shift plugin for rehype.
+Flexible improve [CLS](https://web.dev/cls/) plugin for rehype.
 
 > Caution:
 >
