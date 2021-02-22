@@ -184,7 +184,7 @@ const rehypePlugins = [
 
 if (process.env.NODE_ENV === 'production') {
   rehypePlugins.push(
-    ['rehype-plugin-auto-resolve-layout-shift', { maxWidth: 650 }]
+    ['rehype-plugin-auto-resolve-layout-shift', { type: 'maxWidth', maxWidth: 650 }]
   )
 }
 
