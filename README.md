@@ -42,7 +42,7 @@ async function process(markdown: string) {
     unified()
     .use(markdown)
     .use(remark2rehype)
-    .use(resolveLayoutShiftPlugin, { type: 'maxWidth', maxWidth: '800' })
+    .use(resolveLayoutShiftPlugin, { type: 'maxWidth', maxWidth: 800 })
     .use(html)
     .process(markdown, (err, file) => {
       if (err) {
