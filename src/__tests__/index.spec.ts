@@ -19,6 +19,9 @@ describe('index.ts', () => {
               if (err) {
                 return reject(err)
               }
+              if (!file) {
+                return reject()
+              }
               return resolve(file.toString())
             })
         })
@@ -51,6 +54,9 @@ describe('index.ts', () => {
             .process(rawMarkdown, (err, file) => {
               if (err) {
                 return reject(err)
+              }
+              if (!file) {
+                return reject()
               }
               return resolve(file.toString())
             })
