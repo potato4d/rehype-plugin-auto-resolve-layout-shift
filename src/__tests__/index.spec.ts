@@ -1,6 +1,6 @@
 import fs from 'fs'
 import resolveLayoutShiftPlugin from '../'
-import unified from 'unified'
+import { unified } from 'unified'
 import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import html from 'rehype-stringify'

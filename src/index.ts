@@ -1,6 +1,6 @@
 import { Processor, Transformer } from 'unified'
 import { Node } from 'unist'
-import visit from 'unist-util-visit'
+import { visit } from 'unist-util-visit'
 import hast from 'hast'
 import axios from 'axios'
 import Jimp from 'jimp'
