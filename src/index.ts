@@ -1,6 +1,6 @@
 import { Processor, Transformer } from 'unified'
 import { Node } from 'unist'
-import visit from 'unist-util-visit'
+import { visit } from 'unist-util-visit'
 import hast from 'hast'
 import axios from 'axios'
 import Jimp from 'jimp'
@@ -63,7 +63,7 @@ function resolveLayoutShiftPlugin(
 
   async function transformer(htmlAST: Node): Promise<Node> {
     const matches: hast.Element[] = []
-    visit<hast.Element>(htmlAST, 'element', (el: hast.Element) => {
+    visit(htmlAST, 'element', (el: hast.Element) => {
       matches.push(el)
     })
     await Promise.all(matches.map((el) => visitor(el)))
