@@ -38,7 +38,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "jimp": "^0.16.1",
-    "unified": "^9.2.0",
-    "unist-util-visit": "^2.0.3"
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.0"
   }
 }
